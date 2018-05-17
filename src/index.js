@@ -431,6 +431,8 @@ L.FreeHandShapes = L.FeatureGroup.extend({
         var map = this._map,
             preferences = this.defaultPreferences;
 
+        if(!this._map) return;
+
         map.dragging[method]();
         map.doubleClickZoom[method]();
         map.scrollWheelZoom[method]();
